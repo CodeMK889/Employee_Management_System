@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+    {% block title %}Home - Employee Management System{% endblock %}
+</head>
+<body>
+    {% block content %}
+        <div class="container-fluid h-100">
+            <div class="row h-1600">
+                <div class="col-md-12 col-lg-12 bg-light pt-5">
+                    <div>
+                        <h2>Employee Management System</h2>
+                        <p>Welcome to the Employee Management System!</p>
+                    </div>
+
+
+                        
+                        <div class="row">
+
+                            <div class="col-md-12 col-lg-4">                            
+                                <a class="nav-link active" aria-current="page" href="{% url 'employee_list'%}">
+                                    <h3 class="title_h">Employee</h3>
+                                    <img src="{% static 'images/empl.jpg' %}" class="img-fluid" alt="">
+                                </a>    
+                            </div>
+                        
+                            <div class="col-md-12 col-lg-4">
+                                <a class="nav-link active" aria-current="page" href="{% url 'department_list'%}">
+                                    <h3 class="title_h">Department</h3>
+                                    <img src="{% static 'images/depart.png' %}" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                        
+                            <div class="col-md-12 col-lg-4">
+                                <a class="nav-link active" aria-current="page" href="{% url 'Salary_Report'%}">
+
+                                <h3 class="title_h">Salary Management</h3>
+                                <img src="{% static 'images/report.jpg' %}" class="img-fluid" alt="">
+                                </a>
+                            </div>
+
+                        </div>
+                        
+                        
+                        
+
+                </div>
+            </div>
+        </div>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+    {% endblock %}
+</body>
+</html>

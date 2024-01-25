@@ -1,0 +1,39 @@
+body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  h2, h3 {
+    color: #333;
+  }
+  
+  .container-fluid {
+    height: 100%;
+  }
+  
+  .bg-light {
+    background-color: #f8f9fa;
+  }
+  
+  .p-4 {
+    padding: 1.5rem;
+  }
+  
+  .title_h {
+    color: rgb(203, 241, 128);
+  }
+  
+  .anchor {
+    color: rgb(245, 245, 238);
+  }
+  
+  .footer_style {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+  .main-content {
+    flex: 1;
+  }
+  

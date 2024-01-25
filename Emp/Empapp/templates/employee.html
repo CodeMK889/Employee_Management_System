@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Employee Management - Employee{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <h2>Employee Management</h2>
+ 
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Designation</th>
+                    <th scope="col">Reporting Manager</th>
+                    <th scope="col">Department</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for employee in employees %}
+                    <tr>
+                        <th scope="row">{{ forloop.counter }}</th>
+                        <td>{{ employee.emp_name }}</td>
+                        <td>{{ employee.email }}</td>
+                        <td>{{ employee.address }}</td>
+                        <td>{{ employee.designation }}</td>
+                        <td>{% if employee.reporting_manager %}{{ employee.reporting_manager.emp_name }}{% else %}'-'{% endif %}</td>
+                        <td>{{ employee.department.name }}</td>
+
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
